@@ -219,3 +219,74 @@ p {
   .main-grid { grid-columns: 1fr; grid-template-columns: 1fr; }
   .description-area { flex-grow: 0; } /* スマホでは押し下げない */
 }
+/* --- Comparison Matrix Styles --- */
+.matrix-section {
+  margin-bottom: 60px;
+}
+
+.matrix-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: var(--text-sub);
+}
+
+.matrix-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  overflow-x: auto; /* スマホで表がはみ出さないように */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* スマホでも見出しが潰れないように */
+}
+
+.comparison-table th, 
+.comparison-table td {
+  padding: 20px 24px;
+  text-align: left;
+  font-size: 0.88rem;
+  border-bottom: 1px solid var(--bg);
+}
+
+.comparison-table thead th {
+  background: #fafafa;
+  font-weight: 700;
+  color: var(--text-main);
+  border-bottom: 2px solid var(--border);
+}
+
+.comparison-table th:first-child {
+  width: 150px;
+  color: var(--text-sub);
+  font-weight: 500;
+}
+
+/* 列ごとのアクセントカラー */
+.col-c1 { color: var(--accent-1) !important; }
+.col-c2 { color: var(--accent-2) !important; }
+.col-c3 { color: var(--accent-3) !important; }
+
+.comparison-table tbody tr:hover {
+  background-color: #fcfcf9;
+}
+
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* スマホ対応：横スクロールを促すヒント */
+@media (max-width: 600px) {
+  .matrix-wrapper {
+    margin: 0 -10px; /* 画面端まで広げる */
+    border-radius: 8px;
+  }
+}
