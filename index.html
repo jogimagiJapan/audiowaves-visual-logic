@@ -1,6 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Waves Visual Logic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 <div class="wrapper">
     <header>
-        <link rel="stylesheet" href="style.css">
         <span class="title-en">Acoustic Logic Analysis System</span>
         <h1>音響データ可視化システム</h1>
         <p class="system-desc">
@@ -17,7 +26,6 @@
                     <h3>技術的背景</h3>
                     <p>デジタル音声は通常、1秒間に44,100回という膨大な密度の点データで構成されています。Linspaceは、この中から描画解像度に合わせて一定の歩幅（Step）で値を抽出する手法です。フィルタリングを介さない「生の波形」の断面を抽出します。</p>
                 </div>
-                
                 <div class="application-area">
                     <h3>特性とアートへの応用</h3>
                     <p>その瞬間における「正負の振幅」をダイレクトに示し、計算負荷が低くリアルタイム性に優れます。全体の「地」として機能し、滑らかな曲線や規則的なドット列を形成する基礎となります。</p>
@@ -34,7 +42,6 @@
                     <h3>技術的背景</h3>
                     <p>FFT（高速フーリエ変換）を用いて、音を「時間」から「周波数」へと分解します。そこから全帯域、あるいは特定の帯域のエネルギー総量を算出します。単なる音量ではなく、音の「派手さ」や「音色の濃さ」を数値化します。</p>
                 </div>
-                
                 <div class="application-area">
                     <h3>特性とアートへの応用</h3>
                     <p>高周波成分が多い（ノイジー）ほど複雑に変動します。波形の「テクスチャ（質感）」を司り、密度に応じて線の太さを変えたり、内部に緻密な模様を描き込むデータソースとなります。</p>
@@ -51,7 +58,6 @@
                     <h3>技術的背景</h3>
                     <p>指定した時間窓内における「最大値」と「最小値」のみを記録する手法です。波形の上下の端点（エンベロープ）を繋ぐことで、小さな振動を無視し、音の「外形」を浮き彫りにします。</p>
                 </div>
-                
                 <div class="application-area">
                     <h3>特性とアートへの応用</h3>
                     <p>人間の視覚が認識する「音量感」に最も近く、ドラムのキックなど瞬発的なエネルギーを逃さず描写します。作品に「エッジ」や「コントラスト」を与え、視覚的なインパクトを司ります。</p>
@@ -84,5 +90,7 @@
             </div>
         </div>
     </section>
-
 </div>
+
+</body>
+</html>
