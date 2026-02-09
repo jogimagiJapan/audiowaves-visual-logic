@@ -6,9 +6,9 @@
   --card-bg: #ffffff;
   --text-main: #2c3e50;
   --text-sub: #576574;
-  --accent-1: #5d8aa8;
-  --accent-2: #8e7cc3;
-  --accent-3: #c06c84;
+  --accent-1: #5d8aa8; /* Linspace: Air Blue */
+  --accent-2: #c06c84; /* Spectral: Dusty Rose (赤系) */
+  --accent-3: #d4a373; /* Peak: Amber Gold (黄色系) */
   --border: #e8e8e1;
   --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -245,15 +245,24 @@ p {
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 600px; /* スマホでも見出しが潰れないように */
+  min-width: 600px;
 }
 
 .comparison-table th, 
 .comparison-table td {
   padding: 20px 24px;
-  text-align: left;
   font-size: 0.88rem;
   border-bottom: 1px solid var(--bg);
+}
+
+/* 【修正ポイント】1列目（項目）は左揃え、それ以外は中央揃え */
+.comparison-table th {
+  text-align: left;
+}
+
+.comparison-table td,
+.comparison-table thead th:not(:first-child) {
+  text-align: center;
 }
 
 .comparison-table thead th {
@@ -269,7 +278,7 @@ p {
   font-weight: 500;
 }
 
-/* 列ごとのアクセントカラー */
+/* 列ごとのアクセントカラー（:rootの色が反映されます） */
 .col-c1 { color: var(--accent-1) !important; }
 .col-c2 { color: var(--accent-2) !important; }
 .col-c3 { color: var(--accent-3) !important; }
@@ -286,7 +295,7 @@ p {
 /* スマホ対応：横スクロールを促すヒント */
 @media (max-width: 600px) {
   .matrix-wrapper {
-    margin: 0 -10px; /* 画面端まで広げる */
+    margin: 0 -10px;
     border-radius: 8px;
   }
 }
